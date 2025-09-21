@@ -1,0 +1,41 @@
+.form-timer,
+.timer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 400px;
+
+  input:active,
+  input:focus,
+  input:focus-visible {
+    border-color: #4e75ff;
+  }
+
+  input:disabled {
+    background-color: #fafafa;
+    color: #808080;
+    cursor: auto;
+  }
+}
+
+.timer {
+  padding-top: 32px;
+  gap: 24px;
+
+  .field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .value {
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+  }
+
+  .label {
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,80 @@
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="number"],
+textarea,
+fieldset {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+  padding: 7px 16px;
+  width: 100%;
+  transition: var(--transition);
+
+  &:focus,
+  &:focus-visible {
+    outline: 1px solid #808080;
+  }
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  letter-spacing: 0.04em;
+}
+
+button,
+input[type="button"] {
+  display: inline-block;
+  border-radius: 8px;
+  padding: 8px 16px;
+  background-color: #4e75ff;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  cursor: pointer;
+  transition: var(--transition);
+
+  &:hover {
+    background-color: #6c8cff;
+  }
+
+  &:disabled {
+    background: #cfcfcf;
+    color: #989898;
+    cursor: auto;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: start;
+
+  input,
+  button {
+    margin-top: 8px;
+  }
+
+  button {
+    align-self: flex-start;
+  }
+}
+
+fieldset {
+  display: flex;
+  gap: 48px;
+
+  label {
+    display: inline-block;
+    vertical-align: baseline;
+  }
+}

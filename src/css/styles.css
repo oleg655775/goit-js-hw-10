@@ -4,6 +4,8 @@
   | default @import url()
   |============================
 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* Common styles */
 @import url('./reset.css');
 @import url('./base.css');
@@ -12,7 +14,6 @@
 
 /* Sections style */
 @import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+@import url('./timer.css');
+@import url('./form.css');
+@import url('./iziToast.css');
