@@ -1,9 +1,11 @@
 .header {
   padding: 20px 0;
+  will-change: padding;
 }
 .nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .nav-logo {
   display: inline-flex;
@@ -15,17 +17,24 @@
   align-items: center;
   justify-content: flex-end;
   gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 .nav-link {
   position: relative;
   display: block;
   font-weight: 500;
   letter-spacing: 0.02em;
-  transition: 200ms ease-in;
+  transition: color 200ms ease-in;
+  text-decoration: none;
+  color: inherit;
+  padding: 4px 0;
 }
 .nav-link:hover,
 .nav-link:focus {
   color: #747bff;
+  outline: none;
 }
 .nav-link::after {
   content: '';
@@ -37,8 +46,32 @@
   height: 4px;
   border-radius: 4px;
   transform-origin: center;
+  background: transparent;
   animation: stretch 400ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 200ms both;
+  will-change: transform, background;
 }
 .nav-link.active::after {
   background: #747bff;
+}
+
+@keyframes stretch {
+  0% {
+    transform: translateX(-50%) translateY(100%) scaleX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%) translateY(100%) scaleX(1);
+    opacity: 1;
+  }
+}
+
+.nav-link:focus-visible {
+  outline: 2px solid #747bff;
+  outline-offset: 2px;
+}
+
+@media (hover: none) {
+  .nav-link:hover {
+    color: inherit;
+  }
 }
